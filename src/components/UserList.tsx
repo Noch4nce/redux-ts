@@ -11,9 +11,21 @@ const UserList: FC = () => {
 		fetchUsers()
 	}, [])
 
-	console.log(user, 'user')
+	if (loading) {
+		return <h1>Loading...</h1>
+	}
 
-	return <div>ASD</div>
+	if (error) {
+		return <h1>{error}</h1>
+	}
+
+	return (
+		<div>
+			{user.map((el) => (
+				<div>{el.name}</div>
+			))}
+		</div>
+	)
 }
 
 export default UserList
