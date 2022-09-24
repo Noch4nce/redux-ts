@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
-import { useSelector } from 'react-redux'
+import { useTypedSelector } from '../hooks/useTypedSelector'
 
 const UserList: FC = () => {
-	const users = useSelector((state) => state)
-	console.log(users, 'users')
+	const { user } = useTypedSelector((state) => state.user)
+	console.log(user, 'users')
 
 	return <div>ASD</div>
 }
