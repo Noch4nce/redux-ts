@@ -28,6 +28,6 @@ export const fetchTodos = (page = 1, limit = 10) => {
 	}
 }
 
-export const serTodoPage = (page: number): FieldTodoActionTypes => {
+export const setTodoPage = (page: number): FieldTodoActionTypes => {
 	return { type: TodoActionTypes.SET_TODO_PAGE, payload: page }
 }
