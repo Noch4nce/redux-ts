@@ -1,12 +1,15 @@
+interface TodoItem {
+	id: number | null
+	title: string
+	completed: boolean
+}
+
 export interface ITodo {
-	todos: any[]
+	todos: TodoItem[]
 	loading: boolean
 	error: null | string
 	page: number
 	limit: number
-	// id: number | null
-	// title: string
-	// completed: boolean
 }
 
 export enum TodoActionTypes {

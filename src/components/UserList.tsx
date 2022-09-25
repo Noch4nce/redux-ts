@@ -21,8 +21,8 @@ const UserList: FC = () => {
 
 	return (
 		<div>
-			{user.map((el) => (
-				<div>{el.name}</div>
+			{user.map((el, index) => (
+				<div key={index}>{el.name}</div>
 			))}
 		</div>
 	)
