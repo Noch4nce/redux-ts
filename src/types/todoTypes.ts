@@ -1,5 +1,5 @@
 export interface ITodo {
-	todos: []
+	todos: any[]
 	loading: boolean
 	error: null | string
 	page: number
